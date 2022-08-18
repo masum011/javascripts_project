@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Numbers</title>
+</head>
+<body>
+	<input type="number" name="" id="number-check" onkeyup="checkNumber()" autofocus=""><br>
+	<p id="output"></p>
+
+	<script type="text/javascript">
+		function checkNumber(){
+			document.getElementById('output').innerHTML = '';
+			var number = document.getElementById('number-check').value;
+			number = parseInt(number);
+			if (number < 0) {
+				document.getElementById('output').innerHTML = "Enter a Positive Value";
+			}
+			else if(number %2 == 0){
+				for (var i = 0 ;i < 3; i++) {
+					number = number + 2;
+
+					if(i == 2){
+						document.getElementById('output').innerHTML += number;
+					}
+					else{
+						document.getElementById('output').innerHTML += number +" , ";
+					}
+					
+				}
+			}
+			else if(number %2 == 1){
+				for (var i = 0 ;i < 3; i++) {
+					number = number + 2;
+
+					if(i == 2){
+						document.getElementById('output').innerHTML += number;
+					}
+					else{
+						document.getElementById('output').innerHTML += number +" , ";
+					}
+					
+				}
+			}
+		}
+	</script>
+</body>
+</html>
